@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/DAUM/src" modelPluginID="DAUM" modelName="Gen"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>daum.ecore</foreignModel>
+  <genPackages prefix="Sitac" disposableProviderFactory="true" ecorePackage="daum.ecore#/">
+    <genClasses ecoreClass="daum.ecore#//Intervention">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//Intervention/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//Intervention/historique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Intervention/numeroIntervention"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//Intervention/position"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//Intervention/requerant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Intervention/precision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//Intervention/detachements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//Intervention/victimes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//Intervention/infoTactics"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//Detachement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//Detachement/affectation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//Detachement/chef"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//Moyen">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//Moyen/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//Moyen/personnels"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Moyen/precision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Moyen/numero"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//Moyen/posRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//Moyen/posTarget"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//NSI">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//NSI/porteur"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//InterventionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//InterventionType/code"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//Historique">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//Historique/entrees"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//Entree">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Entree/horodatage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//Entree/type"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//TypeEntree"/>
+    <genClasses ecoreClass="daum.ecore#//Position"/>
+    <genClasses ecoreClass="daum.ecore#//PositionGPS">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//PositionGPS/lat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//PositionGPS/long"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//PositionCivil">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//PositionCivil/nomRue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//PositionCivil/cp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//PositionCivil/numeroRue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//PositionCivil/pays"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//Personne">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Personne/nom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Personne/prenom"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//Agent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Agent/matricule"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//MoyenType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//MoyenType/code"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//Affectation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//Affectation/moyen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Affectation/horodatageDemande"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Affectation/horodatageEngagement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Affectation/horodatageDesengagement"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//SitacModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//SitacModel/interventionTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//SitacModel/typeEntrees"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//SitacModel/interventions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//SitacModel/personnes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//SitacModel/cis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//SitacModel/typeActions"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//CIS">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//CIS/moyens"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="daum.ecore#//InfoTactic">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//InfoTactic/categorie"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="daum.ecore#//InfoPos">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//InfoPos/positions"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//PriseEau">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//PriseEau/perenne"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//SourceDanger"/>
+    <genClasses ecoreClass="daum.ecore#//Categorie"/>
+    <genClasses ecoreClass="daum.ecore#//Cible"/>
+    <genClasses ecoreClass="daum.ecore#//Sinistre"/>
+    <genClasses image="false" ecoreClass="daum.ecore#//InfoLignePos">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference daum.ecore#//InfoLignePos/positions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="daum.ecore#//InfoZone">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//InfoZone/nom"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//Action">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//Action/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Action/noria"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//Action/enLigne"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="daum.ecore#//InfoHorodate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//InfoHorodate/horodatageDebut"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//InfoHorodate/horodatageFin"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//ActionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//ActionType/code"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="daum.ecore#//InfoNiveau">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//InfoNiveau/positionZ"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//SecteurGeo"/>
+    <genClasses ecoreClass="daum.ecore#//SecteurFontionel"/>
+    <genClasses image="false" ecoreClass="daum.ecore#//InfoResponsable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference daum.ecore#//InfoResponsable/chef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//InfoResponsable/niveau"/>
+    </genClasses>
+    <genClasses ecoreClass="daum.ecore#//DonneeContextuel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//DonneeContextuel/orientation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute daum.ecore#//DonneeContextuel/precision"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
